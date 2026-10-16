@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B. Arun | B.Com (Computer Applications) Fresher</title>
+<meta name="description" content="Portfolio of B. Arun, B.Com (Computer Applications) graduate seeking an entry-level role in business operations, data and reporting, or IT support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4f8f3; --card:#ffffff; --ink:#15231b; --muted:#506357;
+  --grid:#cddccf; --green:#1c6b47; --green-soft:#dcefe3; --gold:#f0b429; --gold-ink:#3d2c00;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0f1a14; --card:#16251c; --ink:#e8f1ea; --muted:#9db3a4; --grid:#27402f; --green:#5fcf98; --green-soft:#1c3a2a; --gold:#f0b429; --gold-ink:#2b1f00}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:56px 56px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:var(--paper);opacity:.86;z-index:-1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--grid)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--green)}
+nav ul{display:flex;gap:6px;list-style:none;padding:0}
+nav ul a{display:block;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:15px;font-weight:500;color:var(--muted)}
+nav ul a:hover{background:var(--green-soft);color:var(--ink)}
+
+/* hero as a worksheet */
+.hero{padding:56px 0 40px}
+.sheet{background:var(--card);border:1.5px solid var(--ink);border-radius:10px;overflow:hidden;box-shadow:8px 8px 0 var(--green)}
+.titlebar{display:flex;align-items:center;gap:10px;padding:8px 14px;background:var(--green);color:#fff;font-size:14px;font-weight:600}
+.titlebar i{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.55);display:inline-block}
+.titlebar span{margin-left:6px}
+.fbar{display:flex;border-bottom:1px solid var(--grid);font-size:14px;color:var(--muted)}
+.fbar .ref{padding:7px 16px;border-right:1px solid var(--grid);font-weight:600;color:var(--ink);min-width:64px;text-align:center}
+.fbar .fx{padding:7px 14px;font-style:italic;color:var(--green);border-right:1px solid var(--grid)}
+.fbar .formula{padding:7px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.cols{display:grid;grid-template-columns:44px 1fr}
+.rownums{background:var(--green-soft);border-right:1px solid var(--grid);color:var(--muted);font-size:13px;text-align:center}
+.rownums div{height:56px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--grid)}
+.rownums div:first-child{height:auto;flex:1}
+.cells{padding:40px 36px 36px}
+.hello{font-size:16px;color:var(--muted);font-weight:500}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,10vw,104px);line-height:.95;letter-spacing:-.035em;margin:8px 0 14px}
+.role{font-family:var(--display);font-weight:500;font-size:clamp(20px,3vw,28px);max-width:30ch;line-height:1.25}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);font-size:16px;cursor:pointer;font-family:inherit;background:var(--card);color:var(--ink)}
+.btn.primary{background:var(--gold);color:var(--gold-ink);border-color:var(--gold-ink)}
+.btn:hover{transform:translateY(-2px)}
+.tabs{display:flex;gap:2px;padding:0 12px;background:var(--green-soft);border-top:1px solid var(--grid);font-size:13px}
+.tabs span{padding:7px 16px;color:var(--muted)}
+.tabs span.on{background:var(--card);color:var(--ink);font-weight:600;border-top:2px solid var(--green)}
+
+/* sections */
+section{padding:56px 0}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,5vw,46px);letter-spacing:-.025em;line-height:1.1;margin-bottom:26px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.about p+p{margin-top:14px}
+.facts{background:var(--card);border:1.5px solid var(--ink);border-radius:10px;padding:6px 20px}
+.facts dl{display:grid;grid-template-columns:auto 1fr;gap:0 18px}
+.facts dt,.facts dd{padding:12px 0;border-bottom:1px solid var(--grid)}
+.facts dt{color:var(--muted);font-size:15px}
+.facts dd{font-weight:600}
+.facts dt:last-of-type,.facts dd:last-of-type{border-bottom:0}
+
+/* skills ledger */
+.ledger{width:100%;border-collapse:collapse;background:var(--card);border:1.5px solid var(--ink);border-radius:10px;overflow:hidden}
+.ledger th{background:var(--green);color:#fff;text-align:left;padding:11px 18px;font-size:15px;font-weight:600}
+.ledger td{padding:14px 18px;border-top:1px solid var(--grid);vertical-align:top}
+.ledger td:first-child{font-weight:600;width:34%}
+.ledger tr:hover td{background:var(--green-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{padding:6px 14px;border-radius:99px;border:1.5px solid var(--green);font-size:15px;font-weight:500;background:var(--card)}
+
+/* education */
+.edu{background:var(--card);border:1.5px solid var(--ink);border-left:10px solid var(--gold);border-radius:10px;padding:26px 28px;display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:center}
+.edu h3{font-family:var(--display);font-size:24px;line-height:1.2}
+.edu p{color:var(--muted)}
+.grade{text-align:center;padding:12px 22px;border-radius:10px;background:var(--green-soft)}
+.grade b{display:block;font-family:var(--display);font-size:36px;line-height:1;color:var(--green)}
+.grade small{color:var(--muted);font-size:13px}
+
+/* interests */
+.interests{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.interest{background:var(--card);border:1.5px solid var(--grid);border-radius:10px;padding:20px}
+.interest h3{font-family:var(--display);font-size:20px;margin-bottom:6px}
+.interest p{font-size:15.5px;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--green);color:#fff;border-radius:14px;padding:44px 36px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;border:1.5px solid var(--ink)}
+.contact h2{color:#fff;margin-bottom:10px}
+.contact p{opacity:.92;max-width:42ch}
+.clist{list-style:none;padding:0;display:grid;gap:12px}
+.clist li{background:rgba(255,255,255,.12);border-radius:10px;padding:12px 16px}
+.clist small{display:block;opacity:.8;font-size:13px}
+.clist a,.clist span.v{font-weight:600;word-break:break-word;text-decoration:none}
+.contact .btn{margin-top:20px;border-color:var(--gold-ink)}
+footer{padding:28px 0 40px;text-align:center;color:var(--muted);font-size:14px}
+
+@media (max-width:760px){
+  nav ul a{padding:6px 8px;font-size:14px}
+  .logo{font-size:18px}
+  .about,.contact{grid-template-columns:1fr}
+  .cols{grid-template-columns:30px 1fr}
+  .cells{padding:28px 18px}
+  .edu{grid-template-columns:1fr}
+  .grade{justify-self:start}
+  .contact{padding:30px 22px}
+  .fbar .fx{display:none}
+  .tabs span:nth-child(n+4){display:none}
+}
+@media (max-width:480px){nav ul li:nth-child(n+4){display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}.caret{animation:none!important}}
+
+/* the one moment: formula bar types the name */
+.caret{display:inline-block;width:2px;height:1em;background:var(--green);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">B. Arun<span>.</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="wrap">
+      <div class="sheet">
+        <div class="titlebar"><i></i><i></i><i></i><span>Arun_Portfolio.xlsx</span></div>
+        <div class="fbar">
+          <div class="ref">A1</div>
+          <div class="fx">fx</div>
+          <div class="formula" id="formula" aria-hidden="true"><span id="typed">=PROFILE("B. Arun")</span><span class="caret"></span></div>
+        </div>
+        <div class="cols">
+          <div class="rownums" aria-hidden="true"><div></div><div>2</div><div>3</div></div>
+          <div class="cells">
+            <p class="hello">Hello, I'm</p>
+            <h1>B. Arun</h1>
+            <p class="role">B.Com (Computer Applications) graduate, ready for an entry-level role in business operations, data and reporting, or IT support.</p>
+            <div class="cta">
+              <a class="btn primary" href="#contact">Get in touch</a>
+              <a class="btn" href="#skills">See my skills</a>
+            </div>
+          </div>
+        </div>
+        <div class="tabs" aria-hidden="true"><span class="on">Profile</span><span>Skills</span><span>Education</span><span>Contact</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>I'm a motivated B.Com (Computer Applications) graduate with a strong base in accounting principles, business operations and computer applications.</p>
+          <p>I work comfortably in MS Excel, Word and PowerPoint, and I know the basics of programming. I'm eager to start my career, contribute to a team's goals and keep building my technical and business skills.</p>
+          <p>I'm looking for an entry-level opportunity where I can apply what I know, solve problems and learn new technologies as the organization grows.</p>
+        </div>
+        <aside class="facts" aria-label="Quick facts">
+          <dl>
+            <dt>Degree</dt><dd>B.Com (Computer Applications)</dd>
+            <dt>Status</dt><dd>Fresher, open to work</dd>
+            <dt>Location</dt><dd>Thanjavur, Tamil Nadu</dd>
+            <dt>Languages</dt><dd>English, Tamil</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>What I bring</h2>
+      <table class="ledger">
+        <thead><tr><th>Area</th><th>What it covers</th></tr></thead>
+        <tbody>
+          <tr><td>MS Office</td><td>Excel, Word and PowerPoint for documents, data and presentations.</td></tr>
+          <tr><td>Programming</td><td>Basic programming concepts from my computer applications coursework.</td></tr>
+          <tr><td>Accounting and business</td><td>Accounting principles and how business operations run day to day.</td></tr>
+          <tr><td>Working with people</td><td>Clear communication and teamwork with colleagues and customers.</td></tr>
+          <tr><td>Thinking and learning</td><td>Problem solving, adapting quickly and picking up new tools fast.</td></tr>
+        </tbody>
+      </table>
+      <div class="chips" aria-label="Skill tags">
+        <span class="chip">Interpersonal skills</span><span class="chip">Teamwork</span><span class="chip">Quick learner</span><span class="chip">Adaptability</span><span class="chip">Problem solving</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <div>
+          <h3>B.Com (Computer Applications)</h3>
+          <p>MIET Arts and Science College, Bharathidasan University</p>
+          <p>2023 to 2026</p>
+        </div>
+        <div class="grade"><b>70%</b><small>Overall grade</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="wrap">
+      <h2>Where I want to grow</h2>
+      <div class="interests">
+        <div class="interest"><h3>Business operations</h3><p>Understanding how work flows through a company and making it run smoothly.</p></div>
+        <div class="interest"><h3>Data and reporting</h3><p>Turning figures into clear sheets and reports people can act on.</p></div>
+        <div class="interest"><h3>Computer applications</h3><p>Learning the software and tools that teams rely on every day.</p></div>
+        <div class="interest"><h3>IT and business support</h3><p>Helping colleagues solve problems and keep their work moving.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Let's talk</h2>
+          <p>I'm available for entry-level roles. Send me a message or call, and I'll reply as soon as I can.</p>
+          <button class="btn primary" id="copy" type="button">Copy email address</button>
+        </div>
+        <ul class="clist">
+          <li><small>Email</small><a href="mailto:mr.arun151025@gmail.com">mr.arun151025@gmail.com</a></li>
+          <li><small>Phone</small><a href="tel:+919042378404">+91 90423 78404</a></li>
+          <li><small>Location</small><span class="v">Kamakkshipuram, Thanjavur, Tamil Nadu</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 B. Arun</div></footer>
+
+<script>
+(function(){
+  var el=document.getElementById('typed');
+  var full='=PROFILE("B. Arun")';
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent='';var i=0;
+    var t=setInterval(function(){el.textContent=full.slice(0,++i);if(i>=full.length)clearInterval(t)},70);
+  }
+  var b=document.getElementById('copy');
+  b.addEventListener('click',function(){
+    var mail='mr.arun151025@gmail.com';
+    function done(){b.textContent='Email copied';setTimeout(function(){b.textContent='Copy email address'},2000)}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(mail).then(done,function(){window.location='mailto:'+mail})}
+    else{window.location='mailto:'+mail}
+  });
+})();
+</script>
+</body>
+</html>
